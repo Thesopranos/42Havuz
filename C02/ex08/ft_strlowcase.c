@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mertcaki <mertcaki@student.42kocaeli.co    +#+  +:+       +#+        */
+/*   By: zest <zest@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 12:31:18 by mertcaki          #+#    #+#             */
-/*   Updated: 2023/02/07 12:31:19 by mertcaki         ###   ########.fr       */
+/*   Created: 2023/02/08 00:16:18 by zest              #+#    #+#             */
+/*   Updated: 2023/02/08 00:16:19 by zest             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	counter;
 
 	counter = 0;
-	if (str[counter] == '\0')
-	{
-		return (1);
-	}
 	while (str[counter] != '\0')
 	{
-		if ((str[counter] <= 'z') && (str[counter] >= 'a'))
-			counter ++;
-		else
-			return (0);
+		if ((str[counter] <= 'Z') && (str[counter] >= 'A'))
+			str[counter] += 32;
+		counter ++;
 	}
-	return (1);
+	return (str);
 }
