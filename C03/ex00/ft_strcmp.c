@@ -12,7 +12,7 @@
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	ctr;
+	unsigned int	ctr;
 
 	ctr = 0;
 	while (s1[ctr] == s2[ctr] && (s1[ctr] != '\0' || s2[ctr] != '\0'))
