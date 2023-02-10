@@ -24,12 +24,12 @@ int	ft_strlen(char *str)
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {	
-	int	dest_ctr;
-	int	src_ctr;
+	unsigned int	dest_ctr;
+	unsigned int	src_ctr;
 
 	src_ctr = 0;
 	dest_ctr = ft_strlen(dest);
-	while (src[ctr] != '\0' && src_ctr < nb)
+	while (src[src_ctr] != '\0' && src_ctr < nb)
 	{
 		dest[dest_ctr + src_ctr] = src[src_ctr];
 		src_ctr ++;

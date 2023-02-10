@@ -12,10 +12,10 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	ctr;
+	unsigned int	ctr;
 
 	ctr = 0;
-	while ((s[ctr] != '\0' || s2[ctr] != '\0') && ctr < n)
+	while ((s1[ctr] != '\0' || s2[ctr] != '\0') && ctr < n)
 	{
 		if (s1[ctr] > s2[ctr])
 			return (1);

@@ -13,7 +13,7 @@
 char	*ft_strstr(char *str, char *to_find)
 {
 	int	str_ctr;
-	int	find_str;
+	int	find_ctr;
 
 	str_ctr = 0;
 	find_ctr = 0;
@@ -21,11 +21,11 @@ char	*ft_strstr(char *str, char *to_find)
 		return (str);
 	while (str[str_ctr] != '\0')
 	{
-		while (str[str_ctr + find_ctr] == to_find[j]
+		while (str[str_ctr + find_ctr] == to_find[find_ctr]
 			&& str[str_ctr + find_ctr] != '\0')
 			find_ctr ++;
-		if (to_find[j] == '\0')
-			return (str + i);
+		if (to_find[find_ctr] == '\0')
+			return (str + str_ctr);
 		str_ctr ++;
 		find_ctr = 0;
 	}
