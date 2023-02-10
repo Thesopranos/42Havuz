@@ -32,7 +32,7 @@ char	*ft_strcapitalize(char *str)
 	word_status = 0;
 	counter = 0;
 	ft_strlowcase(str);
-	while (str[counter] >= 'a' && str[counter] <= 'z')
+	while (str[counter] != '\0')
 	{
 		if (str[counter] >= 'a' && str[counter] <= 'z')
 		{
@@ -40,7 +40,7 @@ char	*ft_strcapitalize(char *str)
 				str[counter] -= 32;
 			else if (word_status == 1)
 				str[counter] -= 32;
-				word_status = 0;
+			word_status = 0;
 		}
 		else if (str[counter] >= '0' && str[counter] <= '9')
 			word_status = 0;

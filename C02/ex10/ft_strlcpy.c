@@ -12,9 +12,9 @@
 
 int	ft_strlen(char *str)
 {
-	int	counter;
+	unsigned int	counter;
 
-	counter ++;
+	counter = 0;
 	while (str[counter] != '\0')
 	{
 		counter ++;
@@ -24,10 +24,11 @@ int	ft_strlen(char *str)
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	counter;
-	int	src_len;
+	unsigned int	counter;
+	unsigned int	src_len;
 
 	src_len = ft_strlen(src);
+	counter = 0;
 	if (size != 0)
 	{
 		while (src[counter] != '\0' && counter < size - 1)
