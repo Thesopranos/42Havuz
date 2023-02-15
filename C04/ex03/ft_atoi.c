@@ -22,19 +22,20 @@ int	spaces_counter(char *str)
 	return (counter);
 }
 
-int	*sign(char *str)
+int	sign(char *str)
 {
 	int	counter;
+	int	pos;
 
-	positive = 1;
+	pos = 1;
 	counter = spaces_counter(str);
 	while (str[counter] && (str[counter] == 43 || str[counter] == 45))
 	{
 		if (str[counter] == 45)
-			positive *= -1;
+			pos *= -1;
 		counter ++;
 	}
-	return (args);
+	return (pos);
 }
 
 int	counter_digit(char *str)
